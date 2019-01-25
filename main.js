@@ -3,8 +3,12 @@ var gameData = {
   goldPerClick: 1,
   goldPerClickCost: 10
 }
-document.body.style.backgroundColor= "black";
-document.body.style.color="red";
+
+
+  window.document.body.style.backgroundColor= "black";
+  window.document.body.style.color="white";
+
+
 
 function mineGold() {
   gameData.gold += gameData.goldPerClick
