@@ -3,6 +3,8 @@ var gameData = {
   goldPerClick: 1,
   goldPerClickCost: 10
 }
+document.body.style.backgroundColor= "black";
+document.body.style.color="red";
 
 function mineGold() {
   gameData.gold += gameData.goldPerClick
@@ -21,6 +23,7 @@ function buyGoldPerClick() {
 
 var mainGameLoop = window.setInterval(function() {
   mineGold()
+
 }, 1000)
 
 //save
@@ -37,6 +40,7 @@ if (savegame !== null) {
 //save löschen+refresh
 function killsave(){
 window.localStorage.removeItem("goldMinerSave");
+window.localStorage.clear();
 savegame=0;
 window.localStorage.setItem('goldMinerSave', JSON.stringify(null)),
 window.location.reload();
