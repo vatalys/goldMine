@@ -36,8 +36,8 @@ if (savegame !== null) {
 
 //save löschen+refresh
 function killsave(){
-localStorage.removeItem("goldMinerSave");
+window.localStorage.removeItem("goldMinerSave");
 savegame=0;
-localStorage.setItem('goldMinerSave', JSON.stringify(null)),
-location.reload();
+window.localStorage.setItem('goldMinerSave', JSON.stringify(null)),
+window.location.reload();
 }
