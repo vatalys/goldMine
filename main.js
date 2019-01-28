@@ -40,13 +40,15 @@ function buyStonePerClick() {
     gameData.stonePerClickCost *= 2
     document.getElementById("stoneMined").innerHTML = gameData.stone + " Stone Mined"
     document.getElementById("perClickUpgradeStone").innerHTML = "Upgrade Stone Pickaxe (Currently Level " + gameData.stonePerClick + ") Cost: " + gameData.stonePerClickCost + " Stone"
+  }else {
+    
   }
 }
 
 
 var mainGameLoop = window.setInterval(function() {
-  mineGold(),
-mineStone()
+  mineGold();
+mineStone();
 }, 1000)
 
 //save

@@ -7,15 +7,16 @@
     fontcolor:white
 </style>
   </head>
-
+<link rel="stylesheet" href="goldminer.css">
   <body>
+  <div class="center-div">
     <p id="goldMined">0 Gold Mined</p>
     <p id="stoneMined">0 Stone Mined</p>
     <button onclick="mineGold()">Mine Gold</button>
     <button onclick="buyGoldPerClick()" id="perClickUpgrade">Upgrade Pickaxe (Currently Level 1) Cost: 10 Gold</button>
 <br /><br />
 <button onclick="mineStone();">Mine Stone</button>
-<button onclick="buyStonePerClick(); id="perClickUpgradeStone">Upgrade Stone Pickaxe (Currently Level1) Cost: 10 Gold</button>
+<button onclick="buyStonePerClick();" id="perClickUpgradeStone">Upgrade Stone Pickaxe (Currently Level 1) Cost: 10 Gold</button>
 <br />
 <br />
 <br />
@@ -24,6 +25,7 @@
 <br />
 <br />
     <button background-color: #4CAF50; style="float:center"onclick="killsave();">Delete Save</button>
+</div>
     <script src="main.js" charset="utf-8" type="text/javascript"></script>
   </body>
 </html>
