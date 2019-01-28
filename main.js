@@ -46,7 +46,7 @@ function buyStonePerClick() {
 
 var mainGameLoop = window.setInterval(function() {
   mineGold(),
-mineStone(),
+mineStone()
 }, 1000)
 
 //save
