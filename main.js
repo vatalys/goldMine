@@ -1,7 +1,10 @@
 var gameData = {
   gold: 0,
   goldPerClick: 1,
-  goldPerClickCost: 10
+  goldPerClickCost: 10,
+  stone:0,
+  stonePerClick:1,
+  stonePerClickCost:10,
 }
 
 
@@ -15,6 +18,11 @@ function mineGold() {
   document.getElementById("goldMined").innerHTML = gameData.gold + " Gold Mined"
 }
 
+function mineStone(){
+gameData.stone += gameData.stonePerClick
+document.getElementById("stoneMined").innerHTML = gameData.stone +" Stone Mined"
+}
+
 function buyGoldPerClick() {
   if (gameData.gold >= gameData.goldPerClickCost) {
     gameData.gold -= gameData.goldPerClickCost
@@ -25,9 +33,20 @@ function buyGoldPerClick() {
   }
 }
 
-var mainGameLoop = window.setInterval(function() {
-  mineGold()
+function buyStonePerClick() {
+  if (gameData.stone >= gameData.stonePerClickCost) {
+    gameData.stone -= gameData.stonePerClickCost
+    gameData.stonePerClick += 1
+    gameData.stonePerClickCost *= 2
+    document.getElementById("stoneMined").innerHTML = gameData.stone + " Stone Mined"
+    document.getElementById("perClickUpgradeStone").innerHTML = "Upgrade Stone Pickaxe (Currently Level " + gameData.stonePerClick + ") Cost: " + gameData.stonePerClickCost + " Stone"
+  }
+}
 
+
+var mainGameLoop = window.setInterval(function() {
+  mineGold(),
+mineStone()
 }, 1000)
 
 //save
