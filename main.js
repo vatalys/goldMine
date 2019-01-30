@@ -29,7 +29,7 @@ function buyGoldPerClick() {
     gameData.goldPerClick += 1
     gameData.goldPerClickCost *= 2
     document.getElementById("goldMined").innerHTML = gameData.gold + " Gold Mined"
-    document.getElementById("perClickUpgrade").innerHTML = "Upgrade Pickaxe (Currently Level " + gameData.goldPerClick + ") Cost: " + gameData.goldPerClickCost + " Gold"
+    document.getElementById("perClickUpgrade").innerHTML = "Upgrade Gold Pickaxe<br>(Currently Level " + gameData.goldPerClick + ")<br>Cost: " + gameData.goldPerClickCost + " Gold"
   }
 }
 
@@ -39,7 +39,7 @@ function buyStonePerClick() {
     gameData.stonePerClick += 1
     gameData.stonePerClickCost *= 2
     document.getElementById("stoneMined").innerHTML = gameData.stone + " Stone Mined"
-    document.getElementById("perClickUpgradeStone").innerHTML = "Upgrade Stone Pickaxe (Currently Level " + gameData.stonePerClick + ") Cost: " + gameData.stonePerClickCost + " Stone"
+    document.getElementById("perClickUpgradeStone").innerHTML = "Upgrade Stone Pickaxe<br>(Currently Level " + gameData.stonePerClick + ")<br>Cost: " + gameData.stonePerClickCost + " Stone"
   }else {
     
   }

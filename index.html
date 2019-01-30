@@ -1,31 +1,75 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <style>
+
+<html lang="eng">
+
+<head>
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <title>Gold Miner</title>
-    fontcolor:white
-</style>
-  </head>
-<link rel="stylesheet" href="goldminer.css">
-  <body>
-  <div class="center-div">
-    <p id="goldMined">0 Gold Mined</p>
-    <p id="stoneMined">0 Stone Mined</p>
-    <button onclick="mineGold()">Mine Gold</button>
-    <button onclick="buyGoldPerClick()" id="perClickUpgrade">Upgrade Pickaxe (Currently Level 1) Cost: 10 Gold</button>
-<br /><br />
-<button onclick="mineStone();">Mine Stone</button>
-<button onclick="buyStonePerClick();" id="perClickUpgradeStone">Upgrade Stone Pickaxe (Currently Level 1) Cost: 10 Gold</button>
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-    <button background-color: #4CAF50; style="float:center"onclick="killsave();">Delete Save</button>
-</div>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="goldminer.css">
+</head>
+
+
+<body>
+    <header>
+        <h1 class="text-center">Gold Mine</h1>
+        <button class="btn btn-outline-warning btn-lg" onclick="killsave();">Delete Save</button>
+    </header>
+
+    <div class="container-fluid">
+        <div class="row">
+
+            <div class="ressources col-md-2 m-3">
+                <h2>Ressources</h2>
+                <p id="goldMined">0 Gold Mined</p>
+                <p id="stoneMined">0 Stone Mined</p>
+            </div>
+
+            <div class="buildings col-md-6 my-3">
+                <h2>Buildings</h2>
+                <img src="img/gold-mine.png">
+                <button class="btn btn-outline-light" onclick="mineGold();">Mine Gold</button><br>
+                <img src="img/stone-mine.png">
+                <button class="btn btn-outline-light" onclick="mineStone();">Mine Stone</button>
+            </div>
+
+            <div class="upgrades col-md-3 m-3">
+                <h2>Upgrades</h2>
+
+                <div class="row">
+                    <div class="col-md-4">
+                        <button type="button" class="btn-goldaxe-up btn btn-outline-light btn-block" onclick="buyGoldPerClick();"></button>
+                    </div>
+                    <div class="col-md-8" id="perClickUpgrade">
+                        Upgrade Gold Pickaxe<br>
+                        (Currently Level 1)<br>
+                        Cost: 10 Gold
+                    </div>
+                </div><br>
+
+                <div class="row">
+                    <div class="col-md-4">
+                        <button type="button" class="btn-stoneaxe-up btn btn btn-outline-light btn-block" onclick="buyStonePerClick();"></button>
+                    </div>
+                    <div class="col-md-8" id="perClickUpgradeStone">
+                        Upgrade Stone Pickaxe<br>
+                        (Currently Level 1)<br>
+                        Cost: 10 Gold
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
     <script src="main.js" charset="utf-8" type="text/javascript"></script>
-  </body>
+</body>
+
 </html>

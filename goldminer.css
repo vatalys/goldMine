@@ -1,5 +1,55 @@
-.center-div
-{
-     margin: 0 auto;
-     width: 1000px;
+@font-face {
+    font-family: 'Helveti Pixel';
+    src: url('font/HelvetiPixel.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'NES Cyrillic';
+    src: url('font/NESCyrillic.ttf') format('truetype');
+}
+
+body {
+    background: url(img/stone-pattern-br.png) repeat;
+    font-family: "NES Cyrillic";
+}
+
+header {
+    background-color: #1e1815;
+    padding: 20px;
+}
+
+h1 {
+    color: goldenrod;
+    font-size: 5rem;
+}
+
+h2 {
+    color: goldenrod;
+    font-size: 2.4rem;
+}
+
+
+.ressources,
+.buildings,
+.upgrades {
+    color: #fff;
+    font-size: 1.2rem;
+    background-color: #1e1815;
+    border: 1px solid goldenrod;
+    border-radius: 15px;
+    padding: 20px;
+}
+
+
+
+.btn-goldaxe-up {
+    height: 128px;
+    width: 128px;
+    background: url(img/gold-pickaxe.png) no-repeat;
+}
+
+.btn-stoneaxe-up {
+    height: 128px;
+    width: 128px;
+    background: url(img/stone-pickaxe.png) no-repeat;
 }
